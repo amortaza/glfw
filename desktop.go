@@ -46,6 +46,8 @@ func CreateWindow(width, height int, title string, monitor *Monitor, share *Wind
 
 	window := &Window{Window: w}
 
+	initCursors()
+
 	return window, err
 }
 
@@ -517,4 +519,20 @@ func (w *Window) SetDropCallback(cbfun DropCallback) (previous DropCallback) {
 
 	// TODO: Handle previous.
 	return nil
+}
+
+var ArrowCursor *glfw.Cursor
+var VResizeCursor *glfw.Cursor
+var HResizeCursor *glfw.Cursor
+var IBeamCursor *glfw.Cursor
+var HandCursor *glfw.Cursor
+var CrossHairCursor *glfw.Cursor
+
+func initCursors() {
+	ArrowCursor = glfw.CreateStandardCursor(int(glfw.ArrowCursor))
+	VResizeCursor = glfw.CreateStandardCursor(int(glfw.VResizeCursor))
+	HResizeCursor = glfw.CreateStandardCursor(int(glfw.HResizeCursor))
+	IBeamCursor = glfw.CreateStandardCursor(int(glfw.IBeamCursor))
+	HandCursor = glfw.CreateStandardCursor(int(glfw.HandCursor)           )
+	CrossHairCursor = glfw.CreateStandardCursor(int(glfw.CrosshairCursor))
 }
