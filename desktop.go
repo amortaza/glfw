@@ -529,10 +529,10 @@ var HandCursor *glfw.Cursor
 var CrossHairCursor *glfw.Cursor
 
 func initCursors() {
-	ArrowCursor = glfw.CreateStandardCursor(int(glfw.ArrowCursor))
-	VResizeCursor = glfw.CreateStandardCursor(int(glfw.VResizeCursor))
-	HResizeCursor = glfw.CreateStandardCursor(int(glfw.HResizeCursor))
-	IBeamCursor = glfw.CreateStandardCursor(int(glfw.IBeamCursor))
-	HandCursor = glfw.CreateStandardCursor(int(glfw.HandCursor)           )
-	CrossHairCursor = glfw.CreateStandardCursor(int(glfw.CrosshairCursor))
+	ArrowCursor = glfw.CreateStandardCursor(glfw.ArrowCursor)
+	VResizeCursor = glfw.CreateStandardCursor(glfw.VResizeCursor)
+	HResizeCursor = glfw.CreateStandardCursor(glfw.HResizeCursor)
+	IBeamCursor = glfw.CreateStandardCursor(glfw.IBeamCursor)
+	HandCursor = glfw.CreateStandardCursor(glfw.HandCursor)           
+	CrossHairCursor = glfw.CreateStandardCursor(glfw.CrosshairCursor)
 }
